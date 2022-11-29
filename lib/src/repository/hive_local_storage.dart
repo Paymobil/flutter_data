@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_data/flutter_data.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path/path.dart' as path_helper;
 import 'package:recase/recase.dart';
 
@@ -50,7 +50,7 @@ Widget build(context) {
     }
 
     path = path_helper.join(await baseDirFn!(), 'flutter_data');
-    hive.init(path);
+    hive.initFlutter(path);
 
     isInitialized = true;
   }
